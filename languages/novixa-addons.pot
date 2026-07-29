@@ -1,0 +1,10 @@
+\# Copyright (C) 2026 Novixa
+\# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Novixa Addons for Elementor 1.1.0\n"
+"Report-Msgid-Bugs-To: https://novixa.com/support\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: novixa-addons\n"

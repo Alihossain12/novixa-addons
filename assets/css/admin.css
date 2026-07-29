@@ -1,0 +1,638 @@
+/**
+ * Novixa Addons — Luxury Admin Dashboard Styles
+ * Every selector lives under .novixa-addons- so this sheet can never
+ * leak into or be overridden by another plugin's admin screen.
+ */
+
+.novixa-addons-app,
+.novixa-addons-app * {
+	box-sizing: border-box;
+}
+
+.novixa-addons-app {
+	--novixa-accent: #7c5cff;
+	--novixa-accent-dark: #5b3df0;
+	--novixa-gold: #e0a95c;
+	--novixa-emerald: #17b26a;
+	--novixa-ink: #171522;
+	--novixa-muted: #8a8797;
+	--novixa-border: #ece9f5;
+	--novixa-radius: 14px;
+	display: flex;
+	min-height: calc(100vh - 40px);
+	margin: 20px 20px 0 -20px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	color: var(--novixa-ink);
+	background: #f6f5fb;
+}
+
+/* ---------------------------------- */
+/* Sidebar                             */
+/* ---------------------------------- */
+.novixa-addons-sidebar {
+	width: 250px;
+	flex-shrink: 0;
+	background: linear-gradient(190deg, #1b1530 0%, #241a3d 60%, #2c1f4a 100%);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	padding: 22px 16px;
+}
+
+.novixa-addons-sidebar__brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px 8px 22px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	margin-bottom: 18px;
+}
+
+.novixa-addons-sidebar__logo {
+	width: 36px;
+	height: 36px;
+	border-radius: 10px;
+	background: linear-gradient(135deg, var(--novixa-accent), var(--novixa-gold));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 17px;
+	flex-shrink: 0;
+	box-shadow: 0 4px 14px rgba(124, 92, 255, 0.45);
+}
+
+.novixa-addons-sidebar__brand-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.25;
+}
+
+.novixa-addons-sidebar__brand-text strong {
+	font-size: 15px;
+}
+
+.novixa-addons-sidebar__brand-text span {
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.55);
+}
+
+.novixa-addons-sidebar__nav {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	flex: 1;
+}
+
+.novixa-addons-sidebar__link {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 12px;
+	border-radius: 9px;
+	color: rgba(255, 255, 255, 0.68);
+	text-decoration: none;
+	font-size: 13.5px;
+	font-weight: 500;
+	transition: background 0.15s ease, color 0.15s ease;
+}
+
+.novixa-addons-sidebar__link .dashicons {
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+	opacity: 0.85;
+}
+
+.novixa-addons-sidebar__link:hover {
+	background: rgba(255, 255, 255, 0.06);
+	color: #fff;
+}
+
+.novixa-addons-sidebar__link.is-active {
+	background: linear-gradient(135deg, var(--novixa-accent), var(--novixa-accent-dark));
+	color: #fff;
+	box-shadow: 0 6px 16px rgba(124, 92, 255, 0.35);
+}
+
+.novixa-addons-sidebar__footer {
+	margin-top: auto;
+	padding-top: 16px;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.novixa-addons-plan-card {
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 10px;
+	padding: 12px;
+}
+
+.novixa-addons-plan-card p {
+	margin: 8px 0 0;
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.55);
+	line-height: 1.5;
+}
+
+.novixa-addons-badge--free,
+.novixa-addons-badge--pro {
+	display: inline-block;
+	font-size: 10.5px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	padding: 3px 9px;
+	border-radius: 20px;
+}
+
+.novixa-addons-badge--free {
+	background: rgba(124, 92, 255, 0.18);
+	color: #b9a6ff;
+}
+
+.novixa-addons-badge--pro {
+	background: rgba(23, 178, 106, 0.18);
+	color: #6fe3ac;
+}
+
+.novixa-addons-sidebar__external {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 12.5px;
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+	padding: 4px 4px;
+}
+
+.novixa-addons-sidebar__external:hover {
+	color: #fff;
+}
+
+.novixa-addons-sidebar__version {
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.35);
+	padding: 0 4px;
+}
+
+/* ---------------------------------- */
+/* Main / Topbar                       */
+/* ---------------------------------- */
+.novixa-addons-main {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.novixa-addons-topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 32px;
+	background: #fff;
+	border-bottom: 1px solid var(--novixa-border);
+}
+
+.novixa-addons-topbar__title h1 {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.novixa-addons-topbar__status {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	font-size: 12.5px;
+	color: var(--novixa-muted);
+	background: #f6f5fb;
+	padding: 6px 12px;
+	border-radius: 20px;
+}
+
+.novixa-addons-dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.novixa-addons-dot--ok {
+	background: var(--novixa-emerald);
+	box-shadow: 0 0 0 3px rgba(23, 178, 106, 0.18);
+}
+
+.novixa-addons-dot--warn {
+	background: #f0a83e;
+	box-shadow: 0 0 0 3px rgba(240, 168, 62, 0.18);
+}
+
+.novixa-addons-content {
+	padding: 28px 32px 48px;
+	flex: 1;
+}
+
+.novixa-addons-notice {
+	margin: 16px 32px 0;
+	padding: 10px 16px;
+	border-radius: 8px;
+	background: #e7f8ee;
+	color: #12744f;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.novixa-addons-notice.is-error {
+	background: #fdeaea;
+	color: #c0272d;
+}
+
+/* ---------------------------------- */
+/* Hero                                */
+/* ---------------------------------- */
+.novixa-addons-hero {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	background: linear-gradient(120deg, #2c1f4a, #4b2f8c 55%, #7c5cff);
+	color: #fff;
+	border-radius: var(--novixa-radius);
+	padding: 32px;
+	margin-bottom: 24px;
+	overflow: hidden;
+	position: relative;
+}
+
+.novixa-addons-hero::after {
+	content: "";
+	position: absolute;
+	right: -60px;
+	top: -60px;
+	width: 220px;
+	height: 220px;
+	background: radial-gradient(circle, rgba(224, 169, 92, 0.35), transparent 70%);
+}
+
+.novixa-addons-hero__title {
+	margin: 0 0 8px;
+	font-size: 22px;
+	color: #ffffff !important;
+}
+
+#novixa-addons-hero-title.novixa-addons-hero__title {
+	color: #ffffff !important;
+}
+
+.novixa-addons-hero__text p {
+	margin: 0 0 18px;
+	max-width: 480px;
+	font-size: 13.5px;
+	color: rgba(255, 255, 255, 0.78);
+	line-height: 1.6;
+}
+
+.novixa-addons-hero__ring {
+	--novixa-percent: 0;
+	position: relative;
+	z-index: 1;
+	width: 108px;
+	height: 108px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: conic-gradient(var(--novixa-gold) calc(var(--novixa-percent) * 1%), rgba(255, 255, 255, 0.15) 0);
+}
+
+.novixa-addons-hero__ring::before {
+	content: "";
+	position: absolute;
+	inset: 8px;
+	border-radius: 50%;
+	background: #2c1f4a;
+}
+
+.novixa-addons-hero__ring-value {
+	position: relative;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.novixa-addons-hero__ring-label {
+	position: relative;
+	font-size: 9.5px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------------------------------- */
+/* Cards                               */
+/* ---------------------------------- */
+.novixa-addons-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 18px;
+	margin-bottom: 24px;
+}
+
+.novixa-addons-card {
+	background: #fff;
+	border: 1px solid var(--novixa-border);
+	border-radius: var(--novixa-radius);
+	padding: 22px;
+	display: flex;
+	gap: 14px;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.novixa-addons-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 28px rgba(23, 15, 46, 0.08);
+}
+
+.novixa-addons-card__icon {
+	width: 42px;
+	height: 42px;
+	border-radius: 11px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	font-size: 18px;
+}
+
+.novixa-addons-card__icon--violet {
+	background: rgba(124, 92, 255, 0.12);
+	color: var(--novixa-accent-dark);
+}
+
+.novixa-addons-card__icon--gold {
+	background: rgba(224, 169, 92, 0.16);
+	color: #b5772b;
+}
+
+.novixa-addons-card__icon--emerald {
+	background: rgba(23, 178, 106, 0.14);
+	color: #128a55;
+}
+
+.novixa-addons-card__content h3 {
+	margin: 0 0 4px;
+	font-size: 12px;
+	color: var(--novixa-muted);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.novixa-addons-card__stat {
+	font-size: 23px;
+	font-weight: 700;
+	margin: 0 0 6px;
+}
+
+.novixa-addons-card__content a {
+	font-size: 12px;
+	text-decoration: none;
+	color: var(--novixa-accent-dark);
+	font-weight: 600;
+}
+
+/* ---------------------------------- */
+/* Panel                               */
+/* ---------------------------------- */
+.novixa-addons-panel {
+	background: #fff;
+	border: 1px solid var(--novixa-border);
+	border-radius: var(--novixa-radius);
+	padding: 26px 28px;
+	margin-bottom: 24px;
+}
+
+.novixa-addons-panel__head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.novixa-addons-panel h2 {
+	margin: 0 0 4px;
+	font-size: 16px;
+}
+
+.novixa-addons-panel__desc {
+	color: var(--novixa-muted);
+	font-size: 13px;
+	margin: 0;
+	max-width: 520px;
+}
+
+.novixa-addons-pill {
+	background: #f6f5fb;
+	color: var(--novixa-accent-dark);
+	font-size: 12px;
+	font-weight: 600;
+	padding: 6px 14px;
+	border-radius: 20px;
+	white-space: nowrap;
+}
+
+.novixa-addons-steps {
+	margin: 0;
+	padding-left: 20px;
+	color: #3c3852;
+	font-size: 13px;
+	line-height: 2;
+}
+
+/* ---------------------------------- */
+/* Elements grid                       */
+/* ---------------------------------- */
+.novixa-addons-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 14px;
+	margin-top: 20px;
+}
+
+.novixa-addons-widget-card {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border: 1px solid var(--novixa-border);
+	border-radius: 12px;
+	padding: 16px;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.novixa-addons-widget-card:hover {
+	border-color: #d9d2fb;
+	box-shadow: 0 8px 20px rgba(23, 15, 46, 0.06);
+}
+
+.novixa-addons-widget-card__icon {
+	width: 38px;
+	height: 38px;
+	border-radius: 9px;
+	background: #f6f5fb;
+	color: var(--novixa-accent-dark);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	font-size: 16px;
+}
+
+.novixa-addons-widget-card__body {
+	flex: 1;
+	min-width: 0;
+}
+
+.novixa-addons-widget-card__body h4 {
+	margin: 0 0 2px;
+	font-size: 13.5px;
+}
+
+.novixa-addons-widget-card__body p {
+	margin: 0;
+	font-size: 12px;
+	color: var(--novixa-muted);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* ---------------------------------- */
+/* Toggle switch                       */
+/* ---------------------------------- */
+.novixa-addons-switch {
+	position: relative;
+	display: inline-block;
+	width: 42px;
+	height: 24px;
+	flex-shrink: 0;
+}
+
+.novixa-addons-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.novixa-addons-switch__slider {
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	background-color: #dcd9ea;
+	border-radius: 34px;
+	transition: 0.2s;
+}
+
+.novixa-addons-switch__slider::before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: 0.2s;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.novixa-addons-switch input:checked + .novixa-addons-switch__slider {
+	background: linear-gradient(135deg, var(--novixa-accent), var(--novixa-accent-dark));
+}
+
+.novixa-addons-switch input:checked + .novixa-addons-switch__slider::before {
+	transform: translateX(18px);
+}
+
+/* ---------------------------------- */
+/* Settings form                       */
+/* ---------------------------------- */
+.novixa-addons-form__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 16px 0;
+	border-bottom: 1px solid #f2f0f9;
+}
+
+.novixa-addons-form__label label {
+	font-size: 13.5px;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 3px;
+}
+
+.novixa-addons-form__label p {
+	margin: 0;
+	font-size: 12px;
+	color: var(--novixa-muted);
+}
+
+.novixa-addons-form__actions {
+	padding-top: 20px;
+}
+
+.novixa-addons-button {
+	display: inline-block;
+	border: none;
+	border-radius: 9px;
+	padding: 10px 22px;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.novixa-addons-button--primary {
+	background: linear-gradient(135deg, var(--novixa-accent), var(--novixa-accent-dark));
+	color: #fff;
+	box-shadow: 0 8px 18px rgba(124, 92, 255, 0.32);
+}
+
+.novixa-addons-button--primary:hover {
+	filter: brightness(1.05);
+	color: #fff;
+}
+
+/* ---------------------------------- */
+/* Responsive                          */
+/* ---------------------------------- */
+@media (max-width: 782px) {
+	.novixa-addons-app {
+		flex-direction: column;
+		margin-left: 0;
+	}
+
+	.novixa-addons-sidebar {
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		overflow-x: auto;
+	}
+
+	.novixa-addons-sidebar__footer {
+		display: none;
+	}
+
+	.novixa-addons-hero {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
